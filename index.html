@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        .hide{
+            display: none;
+        }
+        .overlay {
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 20;
+        transition: .3s all;
+        }
+        .modal {
+        width: 100%;
+        max-width: 500px;
+        
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 30;
+        
+        box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+        text-align: center;
+        padding: 30px;
+        border-radius: 3px;
+        background-color: #fff;
+        }
+        .close {
+            position: absolute;
+            right: 5px;
+        }
+        .window-slider {
+            position: relative;
+            width: 30%;
+            margin-left: 200px;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            padding: 10px;
+            margin-bottom: 50px;
+        }
+        .window-img{
+            width: 80%;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .arrow-left{
+            position: absolute;
+            top: 150px;
+            left: 2px;
+        }
+        .arrow-right{
+            position: absolute;
+            top: 150px;
+            right: 2px;
+        }
+        .btn-directions {
+            border: 2px solid black;
+            display: inline-block;
+        }
+        .area {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+        .move {
+            background-color: lightgreen;
+            position: absolute;
+            padding: 20px;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            left: 200px;
+            transition: 1s;
+        }
+        #up {
+            margin-left: 15px;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        #down{
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+        #left {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="window-slider">
+            <button class="arrow-left">
+                <
+            </button>
+            <button class="arrow-right">
+                >
+            </button>
+            
+        </div>
+    </div>
+    <div class="area">
+        <div class="move">
+            <button id = "up" class="btn-directions">
+                up
+            </button>
+            <button id="left" class="btn-directions">
+                left
+            </button>
+            <button id="right" class="btn-directions">
+                right
+            </button>
+            <button id="down" class="btn-directions">
+                down
+            </button>
+        </div>
+    </div>
+</body>
+</html>
