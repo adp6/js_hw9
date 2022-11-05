@@ -58,7 +58,7 @@ window.onload = ()=> {
 
 
     let divMain = document.querySelector('.window-slider')
-    let path = ['image/gosling.jpg', 'image/homelander.jpg']
+    let path = ['image/gosling.jpg', 'image/homelander.jpg', 'image/img.png']
     for (let i = 0; i<path.length; i++) {
         let windowImg = document.createElement('div');
         fragment.appendChild(windowImg);
@@ -90,20 +90,25 @@ window.onload = ()=> {
         function rClick(){
             i++
             if(i > path.length - 1){
-                i = path.length - 1;
+                i=0
+                document.querySelector(`#img${path.length-1}`).classList.add('hide')
+                document.querySelector(`#img${i}`).classList.remove('hide')
+                document.querySelector(`#img${i}`).classList.add('hideImg')
             }
             else{
                 document.querySelector(`#img${i-1}`).classList.add('hide')
                 document.querySelector(`#img${i}`).classList.remove('hide')
+                document.querySelector(`#img${i}`).classList.add('hideImg')
             }
         }
-    btnRight.onclick = setTimeout(()=>{
-        rClick();
-    },2000)
-    btnLeft.onclick = ()=>{
-        lClick();
-    }  
+        function slider(){
+            setInterval(rClick,2000)
+        }
+        slider()
         
+        
+            
+
   
 
    function move(){

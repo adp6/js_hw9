@@ -7,8 +7,24 @@
     <title>Document</title>
     <script src="script.js"></script>
     <style>
+        @keyframes hiden {
+        from {
+            /* opacity: 0.1; */
+            padding-left: 500px;
+        }
+        to {
+            padding-left: 0px;
+            /* opacity: 1; */
+        }
+    }
         .hide{
             display: none;
+        }
+        .hideImg{
+            z-index: 2;
+            animation-name: hiden;
+            animation-duration: 1.5s;
+
         }
         .overlay {
         
@@ -61,8 +77,10 @@
             position: absolute;
             top: 150px;
             left: 2px;
+            z-index: 3;
         }
         .arrow-right{
+            z-index: 3;
             position: absolute;
             top: 150px;
             right: 2px;
